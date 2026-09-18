@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Foods & Deals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_container">
+                <div class="nav_bar">
+                    <div class="nav"> 
+                         <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAANlBMVEUAAAD///+Tk5Pp6em9vb1OTk59fX3x8fGCgoK6urqsrKz8/Pza2tpbW1tXV1fNzc1DQ0NISEg1PRi4AAABKElEQVR4nO3dSW7DMAwFUA9xJme8/2XbLrqWURlhRb13An7YEWlAYIYBAAAAAAAAAAAAAIB/736eWnS+b8x3nMdWzcctAS/RZVa5lANeo2usdC0FXKIrrLYUEh6iC6x2KCQ8RRdY7VRIGF3fDrpPmP8tzX/S5O8W+Tt+B1NbB5P3t0ejX0+PjfkAAAAAAAAAAD7o+Fyjr438yfrcdtnk1e51mnGcX+WAS5vP79f6LiZs+Qn+mEsBp+gKq02FhLfoAqvdCgmj69uBhO3r/neY/yzN3w+Hd/qZJv9cOuT/tgAAAAAAAAAA+KjsO/fS701Mv/sy/f7S/Dto8+8Rzr8LOrq+HXSfMP9bmv+kyd8t8nf8Dqa2DibvIf//PQEAAAAAAAAAAAAAEOgLkyQpOro++/0AAAAASUVORK5CYII="
+                                alt="">
+                         <img class="kfc_text" src="data:image/png;base64,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"
+                                alt="">
+                        <div class="delivery_box">
+                                <img class="delivery_img" src="kfc_img/Delivery.793adbaa710baf75ba78.png" alt="">
+                                <p class="delivery_text">DELIVERY</p>
+                        </div>
+                        <div class="pickup_box">
+                                <img class="pickup_img" src="kfc_img/pickup.47bb874f83ea6acb5a47.png" alt="">
+                                 <p class="pickup_text">PICKUP</p>
+                        </div>
+                        <img class="flyCart_img" src="kfc_img/bucket-filled.5ed4fd2893f4b6af2b06.svg" alt="">
+                        <button class="login flyCart_login">LOGIN</button>
+                    </div>
+                        
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+         <section id="section1">
+             <div class="hero_section_container">
+            <div class="hero_section">
+                <div class="hero_images">
+                    <div class="img">
+                        <img class="hero_slider" src="kfc_img/hero1.jpg" alt="">
+                    </div>
+                    <div class="img ">
+                        <!-- <img class="hero_slider" src="kfc_img/hero2.jpg" alt=""> -->
+                    </div>
+                    <div class="img">
+                        <!-- <img class="hero_slider" src="kfc_img/seller5.png" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_container_order">
+            <div class="order_btn">
+                <button>REORDER</button>
+            </div>
+        </div>
+         </section>
+    <section id="section2">
+
+  
+        <!-- main section2 -->
+      
+        <!-- order button  -->
+        
+        <!-- main section 2 start Explore menu -->
+        <div class="menu_section_container">
+
+            <div class="menu_container">
+                <div class=" headings">
+                    <span class="text">EXPLORE MENU</span>
+                    <h2 class="line"> </h2>
+                </div>
+            </div>
+            <div class="menu_items_container">
+                <!-- item1  -->
+                <div class="menu_items">
+                    <div class="items item1">
+                        <div class="menu_img">
+                            <img src="kfc_img/menu1.png" alt="">
+                        </div>
+                        <div class="menu_text">
+                            Promotion
+                        </div>
+                        <div class="line_segment"> </div>
+                        <div class="hole"></div>
+                    </div>
+                </div>
+                <!-- item2  -->
+                <div class="menu_items">
+                    <div class="items item1">
+                        <div class="menu_img">
+                            <img src="kfc_img/menu2.png" alt="">
+                        </div>
+                        <div class="menu_text">
+                            Promotion
+                        </div>
+                        <div class="line_segment"> </div>
+                        <div class="hole"></div>
+                    </div>
+                </div>
+                    <!-- </div> item3  -->
+                    <div class="menu_items">
+                        <div class="items item1">
+                            <div class="menu_img">
+                                <img src="kfc_img/menu3.png" alt="">
+                            </div>
+                            <div class="menu_text">
+                                Promotion
+                            </div>
+                            <div class="line_segment"> </div>
+                            <div class="hole"></div>
+                        </div>
+                    </div>
+                    <!-- item4  -->
+                    <div class="menu_items">
+                        <div class="items item1">
+                            <div class="menu_img">
+                                <img src="kfc_img/menu4.png" alt="">
+                            </div>
+                            <div class="menu_text">
+                                Promotion
+                            </div>
+                            <div class="line_segment"> </div>
+                            <div class="hole"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- sellers section  -->
+             <div class="seller_section_container">
+                 <div class="seller_container">
+                   <div class=" headings">
+                    <span class="text">BEST SELLERS</span> 
+                    <h2 class="line"> </h2>
+                   </div>
+                 </div>
+                  <div class="seller_item_container">
+                    <!-- seller1  -->
+                    <div class="best_sellers_container">
+                        <div class="seller">
+                            <div class="seller_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="seller_text">Krunch Burger</div>
+                            <div class="ruppes">
+                                <span class="rs">Rs</span>
+                                <span class="rate">310</span>
+                            </div>
+                            <div class="seller_img">
+                                <img src="kfc_img/seller1.png" alt="">
+                            </div>
+                        </div>
+                    
+
+                     <!-- seller2  -->
+                       
+                        <div class="seller">
+                            <div class="seller_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="seller_text">Krunch Burger</div>
+                            <div class="ruppes">
+                                <span class="rs">Rs</span>
+                                <span class="rate">310</span>
+                            </div>
+                            <div class="seller_img">
+                                <img src="kfc_img/seller2.png" alt="">
+                            </div>
+                        </div>
+                 
+                      <!-- seller3  -->
+                       
+                        <div class="seller">
+                            <div class="seller_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="seller_text">Krunch Burger</div>
+                            <div class="ruppes">
+                                <span class="rs">Rs</span>
+                                <span class="rate">310</span>
+                            </div>
+                            <div class="seller_img">
+                                <img src="kfc_img/seller3.png" alt="">
+                            </div>
+                        </div>
+                    
+                      <!-- seller4  -->
+                       
+                        <div class="seller">
+                            <div class="seller_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="seller_text">Krunch Burger</div>
+                            <div class="ruppes">
+                                <span class="rs">Rs</span>
+                                <span class="rate">310</span>
+                            </div>
+                            <div class="seller_img">
+                                <img src="kfc_img/seller4.png" alt="">
+                            </div>
+                        </div>
+
+                       <!-- seller5  -->
+                       
+                        <div class="seller">
+                            <div class="seller_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="seller_text">Krunch Burger</div>
+                            <div class="ruppes">
+                                <span class="rs">Rs</span>
+                                <span class="rate">310</span>
+                            </div>
+                            <div class="seller_img">
+                                <img src="kfc_img/seller5.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                  </div>
+              </div>
+
+            <!-- deals section is start  -->
+             <div class="deals_section_container">
+                 <div class="deals_container">
+                   <div class=" headings">
+                    <span class="text">TOP DEALS</span>
+                    <!-- <p class="line">-</p> -->
+                    <h2 class="line"> </h2>
+                   </div>
+                 </div>
+                  <div class="deals_item_container">
+                    <div class="deals_container_for_items">
+                        <div class="deals">
+                             <div class="deals_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="deals_heart">
+                                <img src="kfc_img/heart.webp" alt="">
+                            </div>
+                            <div class="deals_pic">
+                                <img src="kfc_img/deal1.png" alt="">
+                            </div>
+                            <div class="deals_heading">
+                                Crispy Duo Box
+                            </div>
+                            <div class="deals_para">
+                                Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 Large fries + 2....
+                            </div>
+                            <div class="deals_ruppes">
+                             <span class="deals_rs">Rs</span>
+                            <span class="deals_rate">310</span>   
+                            </div>
+                            <div class="deals_btn">
+                                <button>+ ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                        <!-- deal2  -->
+                         <div class="deals">
+                             <div class="deals_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="deals_heart">
+                                <img src="kfc_img/heart.webp" alt="">
+                            </div>
+                            <div class="deals_pic">
+                                <img src="kfc_img/deal2.png" alt="">
+                            </div>
+                            <div class="deals_heading">
+                                Crispy Duo Box
+                            </div>
+                            <div class="deals_para">
+                                Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 Large fries + 2....
+                            </div>
+                            <div class="deals_ruppes">
+                             <span class="deals_rs">Rs</span>
+                            <span class="deals_rate">310</span>   
+                            </div>
+                            <div class="deals_btn">
+                                <button>+ ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                        <!-- deal3  -->
+                         <div class="deals">
+                             <div class="deals_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="deals_heart">
+                                <img src="kfc_img/heart.webp" alt="">
+                            </div>
+                            <div class="deals_pic">
+                                <img src="kfc_img/deal3.png" alt="">
+                            </div>
+                            <div class="deals_heading">
+                                Crispy Duo Box
+                            </div>
+                            <div class="deals_para">
+                                Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 Large fries + 2....
+                            </div>
+                            <div class="deals_ruppes">
+                             <span class="deals_rs">Rs</span>
+                            <span class="deals_rate">310</span>   
+                            </div>
+                            <div class="deals_btn">
+                                <button>+ ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                        <!-- deal4  -->
+                         <div class="deals">
+                             <div class="deals_boxes">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="deals_heart">
+                                <img src="kfc_img/heart.webp" alt="">
+                            </div>
+                            <div class="deals_pic">
+                                <img src="kfc_img/deal4.png" alt="">
+                            </div>
+                            <div class="deals_heading">
+                                Crispy Duo Box
+                            </div>
+                            <div class="deals_para">
+                                Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 Large fries + 2....
+                            </div>
+                            <div class="deals_ruppes">
+                             <span class="deals_rs">Rs</span>
+                            <span class="deals_rate">310</span>   
+                            </div>
+                            <div class="deals_btn">
+                                <button>+ ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="offers_container">
+                <div class="offers">
+                    <div class="img1 img">
+                        <img src="kfc_img/pic1.jpg" alt="">
+                    </div>
+                    <div class="img2 img">
+                        <img src="kfc_img/pic2.jpg" alt="">
+                    </div>
+                    <div class="img3 img">
+                        <img src="kfc_img/pic3.png" alt="">
+                    </div>
+                    <div class="img4_box">
+                        <div class="pic">
+                            <img src="kfc_img/pic4.jpg" alt="">
+                        </div>
+                        <div class="pic_text">
+                            Adding 11 herbs and spices, Explore our menu and add items to your cart.
+                        </div>
+                        <div class="pic_button">
+                            <button>EXPLORE MENU</button>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+
+      </section>
+    </main>
+
+    <footer>
+        <!-- footer section  -->
+         <div class="footer_container">
+            <div class="footer_section">
+                <div class="footer1">
+                   <div class="kfc_footer_text" >
+                     <img  src="data:image/png;base64,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"
+                                alt="">
+                   </div>
+                   <div class="utube">
+                    <img src="kfc_img/utube logo.png" alt="">
+                   </div>
+                   <div class="insta">
+                    <img src="kfc_img/insta logo.png" alt="">
+                   </div>
+                   <div class="facebook">
+                    <img src="kfc_img/facebook logo.png" alt="">
+                   </div>
+                </div>
+                <div class="footer2">
+                    <div class="list">
+                        <li>About Us</li>
+                        <li>Mitao Bhook</li>
+                        <li>Mitao Bhook - Scholarship</li>
+                        <li>Privacy Policy</li>
+                        <li>Careers</li>
+                    </div>
+                    <div class="list">
+                        <li>Contact Us</li>
+                        <li>Store Locator</li>
+                        <li>Track Order</li>
+                    </div>
+                    <div class="list list3">
+                        <li>Terms & Conditions</li>
+                    </div>
+                    <div class="list list4">
+                        <div class="img1"><img src="kfc_img/app.png" alt=""></div>
+                        <div class="img2"><img src="kfc_img/google.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="footer3">
+                    <div class="copy">2025 KFC. All rights reserved</div>
+                    <div class="powered_text">
+                        <li class="powered">Powered By</li>
+                        <li> <u>SimpleX Technology Solutions</u> </li>
+                    </div>
+                </div>
+                
+            </div>
+         </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
